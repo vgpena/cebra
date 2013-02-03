@@ -1,68 +1,88 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+/* line 8, ../sass/screen.sass */
+body {
+  margin: 0px;
+  background-color: #dadada;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
+/* line 12, ../sass/screen.sass */
+#splash {
+  background-image: url("/images/zebra.svg");
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
+  position: relative;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+/* line 19, ../sass/screen.sass */
+#splash-divider {
+  width: 100%;
+  height: 8px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -o-linear-gradient(top, #ffffff, #dddddd);
+  background-image: linear-gradient(top, #ffffff, #dddddd);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  z-index: 0;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* line 26, ../sass/screen.sass */
+#main > ul {
+  height: 60px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 10px 0px 10px 2%;
+}
+/* line 32, ../sass/screen.sass */
+#main > ul li {
+  width: 18%;
+  height: 100%;
+  display: inline-block;
+  -webkit-background-size: 95% 85%;
+  -moz-background-size: 95% 85%;
+  -o-background-size: 95% 85%;
+  background-size: 95% 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 39, ../sass/screen.sass */
+#main > ul li:not(:first-child) {
+  margin-left: 2%;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+/* line 42, ../sass/screen.sass */
+#who-button {
+  background-image: url("/images/buttons/who.svg");
+  background-color: #b75f11;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+/* line 46, ../sass/screen.sass */
+#videos-button {
+  background-image: url("/images/buttons/videos.svg");
+  background-color: #126cc6;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+/* line 50, ../sass/screen.sass */
+#photos-button {
+  background-image: url("/images/buttons/photos.svg");
+  background-color: #5609c6;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+/* line 54, ../sass/screen.sass */
+#money-button {
+  background-image: url("/images/buttons/money.svg");
+  background-color: #0cbfba;
+}
+
+/* line 58, ../sass/screen.sass */
+#love-button {
+  background-image: url("/images/buttons/love.svg");
+  background-color: #bcb700;
 }

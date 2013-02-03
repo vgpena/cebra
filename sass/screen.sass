@@ -1,0 +1,60 @@
+@import "compass/css3/images"
+@import "compass/css3/background-size"
+@import "compass/css3/box-shadow"
+
+$num-buttons: 5
+
+
+body
+	margin: 0px
+	background-color: #dadada
+
+#splash
+	+background-image(url('/images/zebra.svg'))
+	background-color: #fff
+	+background-size(cover)
+	+box-shadow(rgba(0, 0, 0, 0.3) 0px 0px 4px)
+	position: relative
+	
+#splash-divider
+	width:  100%
+	height:  8px
+	+background-image(linear-gradient(top, #fff, #ddd))
+	+box-shadow(rgba(0, 0, 0, 0.1) 0px 0px 10px)
+	z-index:  0
+
+#main > ul
+	height: 60px
+	list-style-type: none
+	padding: 0px
+	margin: 10px 0px 10px 2%
+	
+	li
+		width: (1/$num-buttons)*100% - 2%
+		height: 100%
+		display: inline-block
+		+background-size(95% 85%)
+		background-position: center
+		background-repeat: no-repeat
+	li:not(:first-child)
+		margin-left: 2%
+
+#who-button
+	+background-image(url('/images/buttons/who.svg'))
+	background-color:  #B75F11
+
+#videos-button
+	+background-image(url('/images/buttons/videos.svg'))
+	background-color:  #126CC6
+	
+#photos-button
+	+background-image(url('/images/buttons/photos.svg'))
+	background-color:  #5609C6
+
+#money-button
+	+background-image(url('/images/buttons/money.svg'))
+	background-color:  #0CBFBA
+	
+#love-button
+	+background-image(url('/images/buttons/love.svg'))
+	background-color:  #BCB700
