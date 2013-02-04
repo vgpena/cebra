@@ -1,4 +1,4 @@
-/* line 9, ../sass/screen.sass */
+/* line 12, ../sass/screen.sass */
 body {
   margin: 0px;
   background-color: #dadada;
@@ -6,7 +6,7 @@ body {
   color: #333333;
 }
 
-/* line 16, ../sass/screen.sass */
+/* line 19, ../sass/screen.sass */
 #splash {
   background-image: url("/images/zebra.svg");
   background-color: white;
@@ -20,7 +20,7 @@ body {
   position: relative;
 }
 
-/* line 23, ../sass/screen.sass */
+/* line 26, ../sass/screen.sass */
 #splash-divider {
   width: 100%;
   height: 8px;
@@ -35,14 +35,14 @@ body {
   z-index: 0;
 }
 
-/* line 30, ../sass/screen.sass */
+/* line 33, ../sass/screen.sass */
 #main-nav > ul {
   height: 60px;
   list-style-type: none;
   padding: 0px;
-  margin: 10px 0px 80px 2%;
+  margin: 10px 0px 0px 2%;
 }
-/* line 36, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 #main-nav > ul li {
   width: 18%;
   height: 100%;
@@ -57,54 +57,55 @@ body {
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px;
 }
-/* line 44, ../sass/screen.sass */
+/* line 47, ../sass/screen.sass */
 #main-nav > ul li:not(:first-child) {
   margin-left: 2%;
 }
 
-/* line 47, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 #who-button {
   background-image: url("/images/buttons/who.svg");
   background-color: #b75f11;
 }
 
-/* line 51, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 #videos-button {
   background-image: url("/images/buttons/videos.svg");
   background-color: #126cc6;
 }
 
-/* line 55, ../sass/screen.sass */
+/* line 58, ../sass/screen.sass */
 #photos-button {
   background-image: url("/images/buttons/photos.svg");
   background-color: #5609c6;
 }
 
-/* line 59, ../sass/screen.sass */
+/* line 62, ../sass/screen.sass */
 #money-button {
   background-image: url("/images/buttons/money.svg");
   background-color: #0cbfba;
 }
 
-/* line 63, ../sass/screen.sass */
+/* line 66, ../sass/screen.sass */
 #love-button {
   background-image: url("/images/buttons/love.svg");
   background-color: #bcb700;
 }
 
-/* line 69, ../sass/screen.sass */
+/* line 72, ../sass/screen.sass */
 .section {
   width: 70%;
   margin-left: 26%;
   padding: 0px 2%;
+  margin-top: 80px;
 }
-/* line 74, ../sass/screen.sass */
+/* line 78, ../sass/screen.sass */
 .section p {
   font-size: 14px;
   line-height: 2em;
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 .section-title {
   font-size: 50px;
   text-transform: uppercase;
@@ -114,23 +115,28 @@ body {
   font-family: "Museo Sans";
   text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 12px;
 }
-/* line 87, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 .section-title small {
   color: #333333;
 }
 
-/* line 90, ../sass/screen.sass */
+/* line 94, ../sass/screen.sass */
 .section-subtitle {
   font-family: "TRIALMimix";
   font-size: 40px;
 }
 
-/* line 94, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
+.partners {
+  display: inline-block;
+}
+
+/* line 101, ../sass/screen.sass */
 .partner {
   width: 50%;
   float: left;
 }
-/* line 98, ../sass/screen.sass */
+/* line 105, ../sass/screen.sass */
 .partner .name {
   font-family: "Kefa";
   font-variant: small-caps;
@@ -141,7 +147,7 @@ body {
   color: #333333;
   margin-bottom: 0px;
 }
-/* line 108, ../sass/screen.sass */
+/* line 115, ../sass/screen.sass */
 .partner .role {
   font-family: "TRIALMimix";
   text-align: center;
@@ -152,21 +158,180 @@ body {
   line-height: 20px;
   margin-top: 0px;
 }
-/* line 118, ../sass/screen.sass */
+/* line 125, ../sass/screen.sass */
 .partner .bio {
   width: 90%;
   margin-left: 5%;
 }
 
-/* line 122, ../sass/screen.sass */
+/* line 129, ../sass/screen.sass */
 .partner-img {
   width: 150px;
   height: 150px;
   display: block;
   margin: auto;
 }
-/* line 128, ../sass/screen.sass */
+/* line 135, ../sass/screen.sass */
 .partner-img img {
   height: 100%;
   width: 100%;
+}
+
+/* line 140, ../sass/screen.sass */
+#videos {
+  display: inline-block;
+}
+
+/* line 142, ../sass/screen.sass */
+.video {
+  width: 48%;
+  margin-left: 1%;
+  float: left;
+  margin-bottom: 2em;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 0px;
+}
+/* line 149, ../sass/screen.sass */
+.video iframe {
+  width: 100%;
+  margin-bottom: -2px;
+}
+/* line 152, ../sass/screen.sass */
+.video .data {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: -1em;
+  padding: 1em;
+}
+/* line 156, ../sass/screen.sass */
+.video .title {
+  font-family: "Kefa";
+  font-variant: small-caps;
+  font-size: 28px;
+  line-height: 34px;
+  color: #eeeeee;
+  margin: 0px;
+  margin-top: 0.25em;
+}
+/* line 164, ../sass/screen.sass */
+.video .date {
+  font-family: "TRIALMimix";
+  color: #aaaaaa;
+  margin: 0px;
+}
+/* line 168, ../sass/screen.sass */
+.video .info {
+  color: #cccccc;
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 172, ../sass/screen.sass */
+.video .footer {
+  overflow: hidden;
+  *zoom: 1;
+  font-family: "TRIALMimix";
+}
+/* line 175, ../sass/screen.sass */
+.video .info-clicky {
+  margin-left: 0.5em;
+  color: white;
+  float: left;
+}
+/* line 179, ../sass/screen.sass */
+.video .external {
+  margin-right: 0.5em;
+  color: #126cc6;
+  float: right;
+}
+
+/* line 185, ../sass/screen.sass */
+#photos {
+  display: inline-block;
+}
+
+/* line 187, ../sass/screen.sass */
+.photo, .photoset {
+  width: 48%;
+  margin-left: 1%;
+  border: solid 3px rgba(255, 255, 255, 0.6);
+  float: left;
+  height: 300px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 0px;
+}
+/* line 194, ../sass/screen.sass */
+.photo img, .photoset img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 199, ../sass/screen.sass */
+.photoset ul {
+  margin: 0px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+/* line 203, ../sass/screen.sass */
+.photoset li:not(:first-child) {
+  display: none;
+}
+
+/* line 206, ../sass/screen.sass */
+.section:last-child {
+  margin-bottom: 3em;
+}
+
+/* line 211, ../sass/screen.sass */
+#footer {
+  width: 100%;
+  margin-top: 4em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+  background-image: url("/images/zebra.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: white;
+}
+
+/* line 218, ../sass/screen.sass */
+.footer-content {
+  background-color: white;
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-left: solid 1px rgba(0, 0, 0, 0.1);
+  border-right: solid 1px rgba(0, 0, 0, 0.1);
+}
+/* line 226, ../sass/screen.sass */
+.footer-content p {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+  margin-bottom: 0px;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+/* line 233, ../sass/screen.sass */
+#footer-links {
+  margin: 1em 0px 2em 0px;
+}
+/* line 235, ../sass/screen.sass */
+#footer-links ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 239, ../sass/screen.sass */
+#footer-links li {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+  font-family: "TRIALMimix";
 }
