@@ -1,10 +1,12 @@
-/* line 8, ../sass/screen.sass */
+/* line 9, ../sass/screen.sass */
 body {
   margin: 0px;
   background-color: #dadada;
+  font-family: "Museo Sans";
+  color: #333333;
 }
 
-/* line 12, ../sass/screen.sass */
+/* line 16, ../sass/screen.sass */
 #splash {
   background-image: url("/images/zebra.svg");
   background-color: white;
@@ -18,7 +20,7 @@ body {
   position: relative;
 }
 
-/* line 19, ../sass/screen.sass */
+/* line 23, ../sass/screen.sass */
 #splash-divider {
   width: 100%;
   height: 8px;
@@ -33,15 +35,15 @@ body {
   z-index: 0;
 }
 
-/* line 26, ../sass/screen.sass */
-#main > ul {
+/* line 30, ../sass/screen.sass */
+#main-nav > ul {
   height: 60px;
   list-style-type: none;
   padding: 0px;
-  margin: 10px 0px 10px 2%;
+  margin: 10px 0px 80px 2%;
 }
-/* line 32, ../sass/screen.sass */
-#main > ul li {
+/* line 36, ../sass/screen.sass */
+#main-nav > ul li {
   width: 18%;
   height: 100%;
   display: inline-block;
@@ -51,38 +53,120 @@ body {
   background-size: 95% 85%;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px;
 }
-/* line 39, ../sass/screen.sass */
-#main > ul li:not(:first-child) {
+/* line 44, ../sass/screen.sass */
+#main-nav > ul li:not(:first-child) {
   margin-left: 2%;
 }
 
-/* line 42, ../sass/screen.sass */
+/* line 47, ../sass/screen.sass */
 #who-button {
   background-image: url("/images/buttons/who.svg");
   background-color: #b75f11;
 }
 
-/* line 46, ../sass/screen.sass */
+/* line 51, ../sass/screen.sass */
 #videos-button {
   background-image: url("/images/buttons/videos.svg");
   background-color: #126cc6;
 }
 
-/* line 50, ../sass/screen.sass */
+/* line 55, ../sass/screen.sass */
 #photos-button {
   background-image: url("/images/buttons/photos.svg");
   background-color: #5609c6;
 }
 
-/* line 54, ../sass/screen.sass */
+/* line 59, ../sass/screen.sass */
 #money-button {
   background-image: url("/images/buttons/money.svg");
   background-color: #0cbfba;
 }
 
-/* line 58, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 #love-button {
   background-image: url("/images/buttons/love.svg");
   background-color: #bcb700;
+}
+
+/* line 69, ../sass/screen.sass */
+.section {
+  width: 70%;
+  margin-left: 26%;
+  padding: 0px 2%;
+}
+/* line 74, ../sass/screen.sass */
+.section p {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+/* line 78, ../sass/screen.sass */
+.section-title {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #222222;
+  border-bottom: solid 1px #666666;
+  margin: 0.5em 0px;
+  font-family: "Museo Sans";
+  text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 12px;
+}
+/* line 87, ../sass/screen.sass */
+.section-title small {
+  color: #333333;
+}
+
+/* line 90, ../sass/screen.sass */
+.section-subtitle {
+  font-family: "TRIALMimix";
+  font-size: 40px;
+}
+
+/* line 94, ../sass/screen.sass */
+.partner {
+  width: 50%;
+  float: left;
+}
+/* line 98, ../sass/screen.sass */
+.partner .name {
+  font-family: "Kefa";
+  font-variant: small-caps;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  margin: 10px 0px;
+  color: #333333;
+  margin-bottom: 0px;
+}
+/* line 108, ../sass/screen.sass */
+.partner .role {
+  font-family: "TRIALMimix";
+  text-align: center;
+  margin: 10px 0px;
+  color: #555555;
+  text-transform: lowercase;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 0px;
+}
+/* line 118, ../sass/screen.sass */
+.partner .bio {
+  width: 90%;
+  margin-left: 5%;
+}
+
+/* line 122, ../sass/screen.sass */
+.partner-img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+/* line 128, ../sass/screen.sass */
+.partner-img img {
+  height: 100%;
+  width: 100%;
 }
