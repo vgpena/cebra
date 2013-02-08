@@ -1,0 +1,10 @@
+/* line 4, ../sass/new.sass */
+body {
+  font-family: "Museo Sans";
+  color: #333333;
+  background-image: url("/images/zebra.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
