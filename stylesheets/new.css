@@ -26,19 +26,19 @@ body {
 .content {
   width: 80%;
   margin-left: 10%;
-  margin-top: 150px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 1em;
 }
 
-/* line 28, ../sass/new.sass */
+/* line 27, ../sass/new.sass */
 div[class$="-link"] {
   background-color: #cccccc;
   position: absolute;
 }
-/* line 31, ../sass/new.sass */
+/* line 30, ../sass/new.sass */
 div[class$="-link"] > p {
   text-align: center;
+  text-transform: uppercase;
 }
 
 /* line 34, ../sass/new.sass */
@@ -58,48 +58,48 @@ div[class$="-link"] > p {
   bottom: 0px;
 }
 
-/* line 46, ../sass/new.sass */
+/* line 45, ../sass/new.sass */
+.left-link, .right-link {
+  height: 9em;
+  top: 50%;
+  margin-top: -100px;
+  padding: 1em;
+}
+/* line 50, ../sass/new.sass */
+.left-link > p, .right-link > p {
+  text-align: center;
+}
+
+/* line 54, ../sass/new.sass */
+.videos-link > p, .photos-link > p {
+  width: 1em;
+}
+
+/* line 57, ../sass/new.sass */
 .right-link {
   right: 0px;
 }
-/* line 48, ../sass/new.sass */
-.right-link > p {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
 
-/* line 51, ../sass/new.sass */
+/* line 60, ../sass/new.sass */
 .left-link {
   left: 0px;
 }
-/* line 53, ../sass/new.sass */
-.left-link > p {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+
+/* line 65, ../sass/new.sass */
+.prev-link.left-link > p, .prev-link.right-link > p {
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
-/* line 56, ../sass/new.sass */
-.left-link, .right-link {
-  height: 200px;
-  top: 50%;
-  margin-top: -100px;
+/* line 69, ../sass/new.sass */
+#who {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.9)));
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+  background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+  background-image: linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
 }
-
-/* line 61, ../sass/new.sass */
-#contact {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.9)));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
-  background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
-}
-/* line 64, ../sass/new.sass */
-#contact .content {
+/* line 72, ../sass/new.sass */
+#who .content {
   background-color: rgba(255, 255, 255, 0);
 }

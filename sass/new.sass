@@ -20,7 +20,6 @@ body
 .content
 	width: 80%
 	margin-left:  10%
-	margin-top: 150px
 	background-color:  rgba(255, 255, 255, 0.7)
 	padding: 1em
 	
@@ -30,6 +29,7 @@ div[class$="-link"]
 	position:  absolute
 	> p
 		text-align:  center
+		text-transform: uppercase
 
 .top-link, .bottom-link
 	width:  200px
@@ -42,24 +42,32 @@ div[class$="-link"]
 .bottom-link
 	bottom: 0px
 	
+.left-link, .right-link
+	height: 9em
+	top: 50%
+	margin-top: -100px
+	padding: 1em
+	> p
+		text-align: center
+	
+.videos-link, .photos-link
+	> p
+		width: 1em
 
 .right-link
 	right: 0px
-	> p
-		+rotate(-90deg)
 
 .left-link
 	left: 0px
-	> p
-		+rotate(90deg)
 	
-.left-link, .right-link
-	height: 200px
-	top: 50%
-	margin-top: -100px
-	
-#contact
-	+background-image(linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%))
+.prev-link
+	&.left-link, &.right-link
+		> p
+			margin-top: 3em
+			margin-bottom: 3em
+
+#who
+	+background-image(linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%))
 	
 	.content
 		background-color: rgba(255, 255, 255, 0)
