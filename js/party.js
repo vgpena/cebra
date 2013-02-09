@@ -8,15 +8,40 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
-	parallax.add($("#intro")).add($("#about"));
+	parallax.add($("#intro")).add($("#who")).add($("#contact")).add($("#videos")).add($("#photos"));
 	parallax.background = $("#bg");
 	parallax.scaling = 0.3;
 	
-	$('.about-link').click(function(){
-		parallax.about.left()
+	$('.who-link').click(function(){
+		parallax.who.top();
 	});
-	$('.intro-link').click(function(){
-		parallax.intro.bottom()
+	
+	$('.contact-link').click(function(){
+		parallax.contact.bottom();
+	});
+	
+	$('.videos-link').click(function(){
+		parallax.videos.right();
+	});
+	
+	$('.photos-link').click(function(){
+		parallax.photos.left();
+	});
+	
+	$('.prev-link.bottom-link').click(function(){
+		parallax.last.bottom();
+	});
+	
+	$('.prev-link.top-link').click(function(){
+		parallax.last.top();
+	});
+	
+	$('.prev-link.left-link').click(function(){
+		parallax.last.left();
+	});
+	
+	$('.prev-link.right-link').click(function(){
+		parallax.last.right();
 	});
 	
 	parallax.intro.show();

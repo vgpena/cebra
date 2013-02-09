@@ -1,12 +1,12 @@
-/* line 4, ../sass/new.sass */
+/* line 5, ../sass/new.sass */
 body {
   font-family: "Museo Sans";
-  color: #999999;
+  color: #333333;
   overflow: hidden;
   margin: 0px;
 }
 
-/* line 10, ../sass/new.sass */
+/* line 11, ../sass/new.sass */
 #bg {
   background-image: url("../images/zebra.svg");
   -webkit-background-size: cover;
@@ -16,8 +16,90 @@ body {
   position: absolute;
 }
 
-/* line 15, ../sass/new.sass */
+/* line 16, ../sass/new.sass */
 .page {
   width: 100%;
-  height: 500px;
+  height: 100%;
+}
+
+/* line 20, ../sass/new.sass */
+.content {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 150px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1em;
+}
+
+/* line 28, ../sass/new.sass */
+div[class$="-link"] {
+  background-color: #cccccc;
+  position: absolute;
+}
+/* line 31, ../sass/new.sass */
+div[class$="-link"] > p {
+  text-align: center;
+}
+
+/* line 34, ../sass/new.sass */
+.top-link, .bottom-link {
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+/* line 39, ../sass/new.sass */
+.top-link {
+  top: 0px;
+}
+
+/* line 42, ../sass/new.sass */
+.bottom-link {
+  bottom: 0px;
+}
+
+/* line 46, ../sass/new.sass */
+.right-link {
+  right: 0px;
+}
+/* line 48, ../sass/new.sass */
+.right-link > p {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+/* line 51, ../sass/new.sass */
+.left-link {
+  left: 0px;
+}
+/* line 53, ../sass/new.sass */
+.left-link > p {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 56, ../sass/new.sass */
+.left-link, .right-link {
+  height: 200px;
+  top: 50%;
+  margin-top: -100px;
+}
+
+/* line 61, ../sass/new.sass */
+#contact {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.9)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
+}
+/* line 64, ../sass/new.sass */
+#contact .content {
+  background-color: rgba(255, 255, 255, 0);
 }
