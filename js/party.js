@@ -48,13 +48,15 @@ $(document).ready(function(){
 	
 	$('.subsection.bottom').each(function(){
 		sub = $(this);
-		$(sub, '.subsection-clicky-open').click(function(){
+		$('.subsection-clicky-open', sub).click(function(){
 			sub.animate({
 				top: '0px',
 			}, 100);
 		});
-		$(sub, '.subsection-clicky-close').click(function(){
-			console.log('close');
+		$('.subsection-clicky-close', sub).click(function(){
+			sub.animate({
+				top: '100%',
+			}, 100);
 		});
 	});
 });
