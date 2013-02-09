@@ -3,6 +3,15 @@
 
 body
 	font-family: "Museo Sans"
-	color:  #333
-	+background-image(url('/images/zebra.svg'))
+	color:  #999
+	overflow: hidden
+	margin: 0px
+	
+#bg
+	+background-image(url('../images/zebra.svg'))
 	+background-size(cover)
+	position: absolute
+
+.page
+	width:  100%
+	height:  500px
