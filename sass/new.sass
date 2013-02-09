@@ -24,7 +24,6 @@ body
 	background-color:  rgba(255, 255, 255, 0.8)
 	padding: 1em
 	position: absolute
-	bottom: 0px
 	
 #videos, #photos
 	> .content
@@ -80,7 +79,9 @@ div[class$="-link"]
 	position: relative
 
 .bottom, .top
-	>.subsection-clicky
+	top: 100%
+	margin-top: -100px
+	>.subsection-clicky-open
 		width: 200px
 		height: 50px
 		background-color: rgba(255, 255, 255, 0.8)
@@ -91,11 +92,24 @@ div[class$="-link"]
 		> p
 			text-align: center
 			margin-top: -.5em
+	.subsection-clicky-close
+		position: absolute
+		bottom: 0px
+		width: 100%
+		h2
+			text-align: right
+			padding-right: 2em
+	> .content
+		bottom: -100px
 .bottom
-	> .subsection-clicky
+	width: 80%
+	margin-left: 10%
+	> .subsection-clicky-open
 		+border-top-radius(100px)
 	> .content
 		top: 100px
+		width: 100%
+		margin: 0px
 
 #who
 	+background-image(linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%))

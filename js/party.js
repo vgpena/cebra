@@ -45,4 +45,16 @@ $(document).ready(function(){
 	});
 	
 	parallax.intro.show();
+	
+	$('.subsection.bottom').each(function(){
+		sub = $(this);
+		$(sub, '.subsection-clicky-open').click(function(){
+			sub.animate({
+				top: '0px',
+			}, 100);
+		});
+		$(sub, '.subsection-clicky-close').click(function(){
+			console.log('close');
+		});
+	});
 });

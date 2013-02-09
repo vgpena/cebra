@@ -29,83 +29,87 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1em;
   position: absolute;
-  bottom: 0px;
 }
 
-/* line 30, ../sass/new.sass */
+/* line 29, ../sass/new.sass */
 #videos > .content, #photos > .content {
   height: 100%;
 }
 
-/* line 35, ../sass/new.sass */
+/* line 34, ../sass/new.sass */
 div[class$="-link"] {
   background-color: #cccccc;
   position: absolute;
 }
-/* line 38, ../sass/new.sass */
+/* line 37, ../sass/new.sass */
 div[class$="-link"] > p {
   text-align: center;
   text-transform: uppercase;
 }
 
-/* line 42, ../sass/new.sass */
+/* line 41, ../sass/new.sass */
 .top-link, .bottom-link {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 47, ../sass/new.sass */
+/* line 46, ../sass/new.sass */
 .top-link {
   top: 0px;
 }
 
-/* line 50, ../sass/new.sass */
+/* line 49, ../sass/new.sass */
 .bottom-link {
   bottom: 0px;
 }
 
-/* line 53, ../sass/new.sass */
+/* line 52, ../sass/new.sass */
 .left-link, .right-link {
   height: 9em;
   top: 50%;
   margin-top: -100px;
   padding: 1em;
 }
-/* line 58, ../sass/new.sass */
+/* line 57, ../sass/new.sass */
 .left-link > p, .right-link > p {
   text-align: center;
 }
 
-/* line 62, ../sass/new.sass */
+/* line 61, ../sass/new.sass */
 .videos-link > p, .photos-link > p {
   width: 1em;
 }
 
-/* line 65, ../sass/new.sass */
+/* line 64, ../sass/new.sass */
 .right-link {
   right: 0px;
 }
 
-/* line 68, ../sass/new.sass */
+/* line 67, ../sass/new.sass */
 .left-link {
   left: 0px;
 }
 
-/* line 73, ../sass/new.sass */
+/* line 72, ../sass/new.sass */
 .prev-link.left-link > p, .prev-link.right-link > p {
   margin-top: 3em;
   margin-bottom: 3em;
 }
 
-/* line 78, ../sass/new.sass */
+/* line 77, ../sass/new.sass */
 .subsection {
   height: 100%;
   position: relative;
 }
 
-/* line 83, ../sass/new.sass */
-.bottom > .subsection-clicky, .top > .subsection-clicky {
+/* line 81, ../sass/new.sass */
+.bottom, .top {
+  top: 100%;
+  margin-top: -100px;
+}
+/* line 84, ../sass/new.sass */
+.bottom > .subsection-clicky-open, .top > .subsection-clicky-open {
   width: 200px;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -114,14 +118,34 @@ div[class$="-link"] > p {
   margin-left: -100px;
   padding-top: 50px;
 }
-/* line 91, ../sass/new.sass */
-.bottom > .subsection-clicky > p, .top > .subsection-clicky > p {
+/* line 92, ../sass/new.sass */
+.bottom > .subsection-clicky-open > p, .top > .subsection-clicky-open > p {
   text-align: center;
   margin-top: -0.5em;
 }
-
 /* line 95, ../sass/new.sass */
-.bottom > .subsection-clicky {
+.bottom .subsection-clicky-close, .top .subsection-clicky-close {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+/* line 99, ../sass/new.sass */
+.bottom .subsection-clicky-close h2, .top .subsection-clicky-close h2 {
+  text-align: right;
+  padding-right: 2em;
+}
+/* line 102, ../sass/new.sass */
+.bottom > .content, .top > .content {
+  bottom: -100px;
+}
+
+/* line 104, ../sass/new.sass */
+.bottom {
+  width: 80%;
+  margin-left: 10%;
+}
+/* line 107, ../sass/new.sass */
+.bottom > .subsection-clicky-open {
   -moz-border-radius-topleft: 100px;
   -webkit-border-top-left-radius: 100px;
   border-top-left-radius: 100px;
@@ -129,12 +153,14 @@ div[class$="-link"] > p {
   -webkit-border-top-right-radius: 100px;
   border-top-right-radius: 100px;
 }
-/* line 97, ../sass/new.sass */
+/* line 109, ../sass/new.sass */
 .bottom > .content {
   top: 100px;
+  width: 100%;
+  margin: 0px;
 }
 
-/* line 100, ../sass/new.sass */
+/* line 114, ../sass/new.sass */
 #who {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.9)));
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
@@ -142,7 +168,7 @@ div[class$="-link"] > p {
   background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
   background-image: linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%);
 }
-/* line 103, ../sass/new.sass */
+/* line 117, ../sass/new.sass */
 #who .content {
   background-color: rgba(255, 255, 255, 0);
 }
