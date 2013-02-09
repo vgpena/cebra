@@ -1,6 +1,7 @@
 @import "compass/css3/images"
 @import "compass/css3/background-size"
 @import "compass/css3/transform"
+@import "compass/css3/border-radius"
 
 body
 	font-family: "Museo Sans"
@@ -20,10 +21,17 @@ body
 .content
 	width: 80%
 	margin-left:  10%
-	background-color:  rgba(255, 255, 255, 0.7)
+	background-color:  rgba(255, 255, 255, 0.8)
 	padding: 1em
+	position: absolute
+	bottom: 0px
+	
+#videos, #photos
+	> .content
+		height: 100%
 	
 	
+///////central nav	
 div[class$="-link"]
 	background-color:  #ccc
 	position:  absolute
@@ -65,6 +73,29 @@ div[class$="-link"]
 		> p
 			margin-top: 3em
 			margin-bottom: 3em
+			
+////////////subsection nav
+.subsection
+	height: 100%
+	position: relative
+
+.bottom, .top
+	>.subsection-clicky
+		width: 200px
+		height: 50px
+		background-color: rgba(255, 255, 255, 0.8)
+		position: absolute
+		left: 50%
+		margin-left: -100px
+		padding-top: 50px
+		> p
+			text-align: center
+			margin-top: -.5em
+.bottom
+	> .subsection-clicky
+		+border-top-radius(100px)
+	> .content
+		top: 100px
 
 #who
 	+background-image(linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%))
