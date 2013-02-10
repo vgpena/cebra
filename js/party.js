@@ -20,6 +20,14 @@ $(document).ready(function(){
 		parallax.contact.bottom();
 	});
 	
+	parallax.videos.preload = function(){
+		$('.videos-link').fadeOut(200);
+	};
+	
+	parallax.videos.onload = function(){
+		$('#videos .prev-link').fadeIn(200);
+	};
+	
 	$('.videos-link').click(function(){
 		parallax.videos.right();
 	});
