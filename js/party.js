@@ -48,31 +48,39 @@ $(document).ready(function(){
 	
 	$('.subsection.bottom').each(function(){
 		$('.subsection-clicky-open', $(this)).click(function(){
-			console.log('bottom open');
+			$(this).parent().parent().children().each(function(){
+				if (($(this).hasClass('subsection')) && !($(this).hasClass('bottom'))){
+					$(this).hide();
+				};
+			});
 			$(this).parent().animate({
 				top: '0px',
 			}, 100);
 		});
 		$('.subsection-clicky-close', $(this)).click(function(){
-			console.log('bottom close');
 			$(this).parent().parent().animate({
 				top: '100%',
 			}, 100);
+			$(this).parent().parent().parent().children().show();
 		});
 	});
 	
 	$('.subsection.top').each(function(){
 		$('.subsection-clicky-open', $(this)).click(function(){
-			console.log('top open');
+			$(this).parent().parent().children().each(function(){
+				if (($(this).hasClass('subsection')) && !($(this).hasClass('top'))){
+					$(this).hide();
+				};
+			});
 			$(this).parent().animate({
 				top: '0px',
 			}, 100);
 		});
 		$('.subsection-clicky-close', $(this)).click(function(){
-			console.log('top close');
 			$(this).parent().parent().animate({
 				top: '-100%',
 			}, 100);
+			$(this).parent().parent().parent().children().show();
 		});
 	});
 });
