@@ -47,15 +47,31 @@ $(document).ready(function(){
 	parallax.intro.show();
 	
 	$('.subsection.bottom').each(function(){
-		sub = $(this);
-		$('.subsection-clicky-open', sub).click(function(){
-			sub.animate({
+		$('.subsection-clicky-open', $(this)).click(function(){
+			console.log('bottom open');
+			$(this).parent().animate({
 				top: '0px',
 			}, 100);
 		});
-		$('.subsection-clicky-close', sub).click(function(){
-			sub.animate({
+		$('.subsection-clicky-close', $(this)).click(function(){
+			console.log('bottom close');
+			$(this).parent().parent().animate({
 				top: '100%',
+			}, 100);
+		});
+	});
+	
+	$('.subsection.top').each(function(){
+		$('.subsection-clicky-open', $(this)).click(function(){
+			console.log('top open');
+			$(this).parent().animate({
+				top: '0px',
+			}, 100);
+		});
+		$('.subsection-clicky-close', $(this)).click(function(){
+			console.log('top close');
+			$(this).parent().parent().animate({
+				top: '-100%',
 			}, 100);
 		});
 	});
