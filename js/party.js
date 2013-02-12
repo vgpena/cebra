@@ -63,12 +63,12 @@ $(document).ready(function(){
 			});
 			$(this).parent().animate({
 				top: '0px',
-			}, 100);
+			}, 200);
 		});
 		$('.subsection-clicky-close', $(this)).click(function(){
 			$(this).parent().parent().animate({
 				top: '100%',
-			}, 100);
+			}, 200);
 			$(this).parent().parent().parent().children().fadeIn(30);
 		});
 	});
@@ -82,13 +82,51 @@ $(document).ready(function(){
 			});
 			$(this).parent().animate({
 				top: '0px',
-			}, 100);
+			}, 200);
 		});
 		$('.subsection-clicky-close', $(this)).click(function(){
 			$(this).parent().parent().animate({
 				top: '-100%',
-			}, 100);
+			}, 200);
 			$(this).parent().parent().parent().children().fadeIn(30);
 		});
 	});
+});
+
+//keybindings wooooo!
+$(document).keydown(function(a){
+	if ($("#intro").css("display")=="block"){
+		if (a.keyCode == 37){
+			parallax.photos.left();
+		}
+		else if (a.keyCode == 38){
+			parallax.who.top();
+		}
+		else if (a.keyCode == 39){
+			parallax.videos.right();
+		}
+		else if (a.keyCode == 40){
+			parallax.contact.bottom();
+		};
+	}
+	else if ($("#videos").css("display")=="block"){
+		if (a.keyCode == 37){
+			parallax.last.left();
+		};
+	}
+	else if ($("#contact").css("display")=="block"){
+		if (a.keyCode == 38){
+			parallax.last.top();
+		};
+	}
+	else if ($("#photos").css("display")=="block"){
+		if (a.keyCode == 39){
+			parallax.intro.right();
+		};
+	}
+	else if ($("#who").css("display")=="block"){
+		if (a.keyCode == 40){
+			parallax.intro.bottom();
+		};
+	};
 });
