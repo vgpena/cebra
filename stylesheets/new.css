@@ -199,3 +199,10 @@ div[class$="-link"] > p {
 #who .content {
   background-color: rgba(255, 255, 255, 0);
 }
+/* line 135, ../sass/new.sass */
+#who .content p > span {
+  text-transform: uppercase;
+  display: inline-block;
+  width: 0.8em;
+  text-align: center;
+}

@@ -57,7 +57,6 @@ $(document).ready(function(){
 	
 	////show and hide the nav buttons
 	parallax.preload = function(){
-		console.log(current);
 		$('#'+current+' .prev-link').fadeIn(800);
 		$('#intro .'+current+'-link').fadeOut(800);
 	};
@@ -113,6 +112,9 @@ $(document).ready(function(){
 	for (var i=0; i < text.length; i++){
 		target.append('<span>'+text[i]+'</span>');
 	};
+	$('span', target).each(function(){
+		console.log($(this).width());
+	});
 });
 
 //keybindings wooooo!
