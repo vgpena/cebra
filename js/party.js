@@ -114,7 +114,6 @@ $(document).ready(function(){
 		target.append('<span>'+text[i]+'</span>');
 	};
 	target.children().each(function(){
-		//console.log($(this));
 		if ($(this).text()==" "){
 			$(this).addClass('empty');
 		};

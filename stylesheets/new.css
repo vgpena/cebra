@@ -208,8 +208,5 @@ div[class$="-link"] > p {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-}
-/* line 141, ../sass/new.sass */
-#who .content p > span.empty {
-  width: 0.5em;
+  width: 1em;
 }
