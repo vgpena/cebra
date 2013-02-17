@@ -1,5 +1,6 @@
 var height,
-	width;
+	width,
+	current;
 
 $(window).load(function(){
 	height = $(window).height();
@@ -13,26 +14,22 @@ $(document).ready(function(){
 	parallax.scaling = 0.3;
 	
 	$('.who-link').click(function(){
+		current = $('#who');
 		parallax.who.top();
 	});
 	
 	$('.contact-link').click(function(){
+		current = $('#contact');
 		parallax.contact.bottom();
 	});
 	
-	parallax.videos.preload = function(){
-		$('.videos-link').fadeOut(200);
-	};
-	
-	parallax.videos.onload = function(){
-		$('#videos .prev-link').fadeIn(200);
-	};
-	
 	$('.videos-link').click(function(){
+		current = $('#videos');
 		parallax.videos.right();
 	});
 	
 	$('.photos-link').click(function(){
+		current = $('#photos');
 		parallax.photos.left();
 	});
 	
@@ -54,6 +51,22 @@ $(document).ready(function(){
 	
 	parallax.intro.show();
 	
+	parallax.preload = function(){
+		console.log(current);
+		$('.prev-link', current).fadeIn(800);
+		if (current.attr('id')=='who'){
+			$('#intro .'+current.attr('id')+'-link').fadeOut(800);
+		};
+	};
+	
+	parallax.intro.preload = function(){
+		$('.prev-link', current).fadeOut(800);
+		if (current.attr('id')=='who'){
+			$('#intro .who-link').fadeIn(800);
+		};
+	};
+
+/////subsection behavior	
 	$('.subsection.bottom').each(function(){
 		$('.subsection-clicky-open', $(this)).click(function(){
 			$(this).parent().parent().children().each(function(){
@@ -97,15 +110,19 @@ $(document).ready(function(){
 $(document).keydown(function(a){
 	if ($("#intro").css("display")=="block"){
 		if (a.keyCode == 37){
+			current = $('#photos');
 			parallax.photos.left();
 		}
 		else if (a.keyCode == 38){
+			current = $('#who');
 			parallax.who.top();
 		}
 		else if (a.keyCode == 39){
+			current = $('#videos');
 			parallax.videos.right();
 		}
 		else if (a.keyCode == 40){
+			current = $('#contact');
 			parallax.contact.bottom();
 		};
 	}
