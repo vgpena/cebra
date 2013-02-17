@@ -205,6 +205,7 @@ div[class$="-link"] > p {
 }
 /* line 137, ../sass/new.sass */
 #who .content p > span {
+  font-size: 50px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;

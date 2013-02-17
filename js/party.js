@@ -108,15 +108,30 @@ $(document).ready(function(){
 	///////text resizing in #who
 	var target = $('#who .content > p'),
 		text = target.text().split(''),
-		targetWidth = $('#who').innerWidth()*.8;
+		targetWidth = $('#who').innerWidth()*.8,
+		currPos,
+		currSize;
+	//console.log(currSize);
 	target.empty();
-	for (var i=0; i < text.length; i++){
-		target.append('<span>'+text[i]+'</span>');
-	};
-	target.children().each(function(){
-		if ($(this).text()==" "){
-			$(this).addClass('empty');
+	$.fn.refill = function(callback){
+		for (var i=0; i < text.length; i++){
+			$(this).append('<span>'+text[i]+'</span>');
 		};
+		callback();
+	};
+	target.refill(function(){
+		console.log($('span', target).css('font-size'));
+	});
+	//target.children().each(function(){
+	//	if ($(this).text()==" "){
+	//		$(this).addClass('empty');
+	//	};
+	//});
+	//$('span', target).each(function(){
+	//	console.log($(this));
+	//});
+	target.children().each(function(){
+		currPos += $(this).width();
 	});
 });
 
