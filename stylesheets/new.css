@@ -208,7 +208,7 @@ div[class$="-link"] > p {
   font-size: 50px;
   text-transform: uppercase;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   width: 1em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.8em;
 }

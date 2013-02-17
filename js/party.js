@@ -110,7 +110,8 @@ $(document).ready(function(){
 		text = target.text().split(''),
 		targetWidth = $('#who').innerWidth()*.8,
 		currPos = 0,
-		currSize;
+		currSize,
+		denom = 20;
 	target.empty();
 	$.fn.refill = function(callback){
 		for (var i=0; i < text.length; i++){
@@ -119,24 +120,30 @@ $(document).ready(function(){
 		callback();
 	};
 	target.refill(function(){
-		currSize = $('span', target).css('font-size').replace('px', '');
+		currSize = (1/denom)*targetWidth;
 	});
 	target.children().each(function(){
-		$(this).width(currSize);
+		$(this).width((1/denom)*targetWidth);
 		currPos += $(this).width();
 		if (currPos >= targetWidth){
-			if (currSize > 10){
-				currSize -= 5;
+			if (denom < 80){
+				denom += 10;
 			}
 			else{
-				currsize = 10;
+				denom = 80;
 			};
-			$(this).css('font-size', currSize+'px');
+			$(this).css('font-size', (1/denom)*targetWidth+'px');
 			currPos = $(this).width();
-			//$(this).before('</br>');
 		}
 		else{
-			$(this).css('font-size', currSize+'px');
+			if (currPos >= targetWidth/2){
+				$(this).css('text-align', 'right');
+			};
+			if (currPos + 1/denom*targetWidth >= targetWidth){
+				console.log(targetWidth - currPos);
+				$(this).css('margin-left', (targetWidth - currPos)+'px')
+			};
+			$(this).css('font-size', (1/denom)*targetWidth+'px');
 		};
 	});
 });
