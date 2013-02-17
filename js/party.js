@@ -14,22 +14,22 @@ $(document).ready(function(){
 	parallax.scaling = 0.3;
 	
 	$('.who-link').click(function(){
-		current = $('#who');
+		current = 'who';
 		parallax.who.top();
 	});
 	
 	$('.contact-link').click(function(){
-		current = $('#contact');
+		current = 'contact';
 		parallax.contact.bottom();
 	});
 	
 	$('.videos-link').click(function(){
-		current = $('#videos');
+		current = 'videos';
 		parallax.videos.right();
 	});
 	
 	$('.photos-link').click(function(){
-		current = $('#photos');
+		current = 'photos';
 		parallax.photos.left();
 	});
 	
@@ -53,17 +53,13 @@ $(document).ready(function(){
 	
 	parallax.preload = function(){
 		console.log(current);
-		$('.prev-link', current).fadeIn(800);
-		if (current.attr('id')=='who'){
-			$('#intro .'+current.attr('id')+'-link').fadeOut(800);
-		};
+		$('#'+current+' .prev-link').fadeIn(800);
+		$('#intro .'+current+'-link').fadeOut(800);
 	};
 	
 	parallax.intro.preload = function(){
-		$('.prev-link', current).fadeOut(800);
-		if (current.attr('id')=='who'){
-			$('#intro .who-link').fadeIn(800);
-		};
+		$('#'+current+' .prev-link').fadeOut(800);
+		$('#intro .'+current+'-link').fadeIn(800);
 	};
 
 /////subsection behavior	
@@ -110,19 +106,19 @@ $(document).ready(function(){
 $(document).keydown(function(a){
 	if ($("#intro").css("display")=="block"){
 		if (a.keyCode == 37){
-			current = $('#photos');
+			current = 'photos';
 			parallax.photos.left();
 		}
 		else if (a.keyCode == 38){
-			current = $('#who');
+			current = 'who';
 			parallax.who.top();
 		}
 		else if (a.keyCode == 39){
-			current = $('#videos');
+			current = 'videos';
 			parallax.videos.right();
 		}
 		else if (a.keyCode == 40){
-			current = $('#contact');
+			current = 'contact';
 			parallax.contact.bottom();
 		};
 	}
