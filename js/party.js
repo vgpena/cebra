@@ -13,6 +13,8 @@ $(document).ready(function(){
 	parallax.background = $("#bg");
 	parallax.scaling = 0.3;
 	
+	
+	/////section movement
 	$('.who-link').click(function(){
 		current = 'who';
 		parallax.who.top();
@@ -49,8 +51,11 @@ $(document).ready(function(){
 		parallax.last.right();
 	});
 	
+	////show the first panel
 	parallax.intro.show();
 	
+	
+	////show and hide the nav buttons
 	parallax.preload = function(){
 		console.log(current);
 		$('#'+current+' .prev-link').fadeIn(800);
@@ -62,7 +67,7 @@ $(document).ready(function(){
 		$('#intro .'+current+'-link').fadeIn(800);
 	};
 
-/////subsection behavior	
+	/////subsection behavior	
 	$('.subsection.bottom').each(function(){
 		$('.subsection-clicky-open', $(this)).click(function(){
 			$(this).parent().parent().children().each(function(){
@@ -100,6 +105,14 @@ $(document).ready(function(){
 			$(this).parent().parent().parent().children().fadeIn(30);
 		});
 	});
+	
+	///////text resizing in #who
+	var target = $('#who .content > p'),
+		text = target.text().split('');
+	target.empty();
+	for (var i=0; i < text.length; i++){
+		target.append('<span>'+text[i]+'</span>');
+	};
 });
 
 //keybindings wooooo!
