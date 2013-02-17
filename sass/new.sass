@@ -2,9 +2,12 @@
 @import "compass/css3/background-size"
 @import "compass/css3/transform"
 @import "compass/css3/border-radius"
+@import "compass/css3/font-face"
+
++font-face("lol", font-files("../../fonts/museosans_500-webfont.ttf", "../../fonts/museosans_500-webfont.woff", "../../fonts/museosans_500-webfont.svg", "../../fonts/MuseoSans_500.otf"), "../../fonts/museosans_500-webfont.eot")
 
 body
-	font-family: "Museo Sans"
+	font-family: "lol"
 	color:  #333
 	overflow: hidden
 	margin: 0px
@@ -128,7 +131,7 @@ div[class$="-link"]
 		
 
 #who
-	+background-image(linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 40%))
+	+background-image(linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 30%))
 	
 	.content
 		background-color: rgba(255, 255, 255, 0)

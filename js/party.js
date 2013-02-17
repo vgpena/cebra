@@ -110,7 +110,6 @@ $(document).ready(function(){
 		text = target.text().split(''),
 		targetWidth = $('#who').innerWidth()*.8,
 		currPos = 0,
-		currSize,
 		denom = 20;
 	target.empty();
 	$.fn.refill = function(callback){
@@ -140,7 +139,6 @@ $(document).ready(function(){
 				$(this).css('text-align', 'right');
 			};
 			if (currPos + 1/denom*targetWidth >= targetWidth){
-				console.log(targetWidth - currPos);
 				$(this).css('margin-left', (targetWidth - currPos)+'px')
 			};
 			$(this).css('font-size', (1/denom)*targetWidth+'px');
