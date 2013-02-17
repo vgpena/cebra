@@ -210,4 +210,5 @@ div[class$="-link"] > p {
   display: inline-block;
   text-align: center;
   width: 1em;
+  margin-bottom: 0.4em;
 }

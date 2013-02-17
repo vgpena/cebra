@@ -109,9 +109,8 @@ $(document).ready(function(){
 	var target = $('#who .content > p'),
 		text = target.text().split(''),
 		targetWidth = $('#who').innerWidth()*.8,
-		currPos,
+		currPos = 0,
 		currSize;
-	//console.log(currSize);
 	target.empty();
 	$.fn.refill = function(callback){
 		for (var i=0; i < text.length; i++){
@@ -120,18 +119,25 @@ $(document).ready(function(){
 		callback();
 	};
 	target.refill(function(){
-		console.log($('span', target).css('font-size'));
+		currSize = $('span', target).css('font-size').replace('px', '');
 	});
-	//target.children().each(function(){
-	//	if ($(this).text()==" "){
-	//		$(this).addClass('empty');
-	//	};
-	//});
-	//$('span', target).each(function(){
-	//	console.log($(this));
-	//});
 	target.children().each(function(){
+		$(this).width(currSize);
 		currPos += $(this).width();
+		if (currPos >= targetWidth){
+			if (currSize > 10){
+				currSize -= 5;
+			}
+			else{
+				currsize = 10;
+			};
+			$(this).css('font-size', currSize+'px');
+			currPos = $(this).width();
+			//$(this).before('</br>');
+		}
+		else{
+			$(this).css('font-size', currSize+'px');
+		};
 	});
 });
 
