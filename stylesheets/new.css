@@ -200,9 +200,16 @@ div[class$="-link"] > p {
   background-color: rgba(255, 255, 255, 0);
 }
 /* line 135, ../sass/new.sass */
+#who .content p {
+  width: 100%;
+}
+/* line 137, ../sass/new.sass */
 #who .content p > span {
   text-transform: uppercase;
   display: inline-block;
-  width: 0.8em;
   text-align: center;
+}
+/* line 141, ../sass/new.sass */
+#who .content p > span.empty {
+  width: 0.5em;
 }

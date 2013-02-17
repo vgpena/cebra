@@ -132,8 +132,11 @@ div[class$="-link"]
 	
 	.content
 		background-color: rgba(255, 255, 255, 0)
-		p > span
-			text-transform: uppercase
-			display: inline-block
-			width: .8em
-			text-align: center
+		p
+			width: 100%
+			> span
+				text-transform: uppercase
+				display: inline-block
+				text-align: center
+				&.empty
+					width: .5em

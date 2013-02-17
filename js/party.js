@@ -107,13 +107,17 @@ $(document).ready(function(){
 	
 	///////text resizing in #who
 	var target = $('#who .content > p'),
-		text = target.text().split('');
+		text = target.text().split(''),
+		targetWidth = $('#who').innerWidth()*.8;
 	target.empty();
 	for (var i=0; i < text.length; i++){
 		target.append('<span>'+text[i]+'</span>');
 	};
-	$('span', target).each(function(){
-		console.log($(this).width());
+	target.children().each(function(){
+		//console.log($(this));
+		if ($(this).text()==" "){
+			$(this).addClass('empty');
+		};
 	});
 });
 
