@@ -3,6 +3,7 @@
 @import "compass/css3/transform"
 @import "compass/css3/border-radius"
 @import "compass/css3/font-face"
+@import "compass/css3/box-shadow"
 
 +font-face("lol", font-files("../../fonts/museosans_500-webfont.ttf", "../../fonts/museosans_500-webfont.woff", "../../fonts/museosans_500-webfont.svg", "../../fonts/MuseoSans_500.otf"), "../../fonts/museosans_500-webfont.eot")
 
@@ -11,6 +12,7 @@ body
 	color:  #333
 	overflow: hidden
 	margin: 0px
+	line-height: 1.6em
 	
 #bg
 	+background-image(url('../images/zebra.svg'))
@@ -24,9 +26,11 @@ body
 .content
 	width: 80%
 	margin-left:  10%
-	background-color:  rgba(255, 255, 255, 0.8)
+	background-color:  rgba(255, 255, 255, 0.9)
+	+box-shadow(rgba(0, 0, 0, .5) 0px 0px 20px)
 	padding: 1em
 	position: absolute
+	
 	
 #videos, #photos
 	> .content
@@ -57,6 +61,7 @@ div[class$="-link"]
 	top: 50%
 	margin-top: -100px
 	padding: 1em
+	line-height: 1.2em
 	> p
 		text-align: center
 	
@@ -88,7 +93,7 @@ div[class$="-link"]
 	>.subsection-clicky-open
 		width: 200px
 		height: 50px
-		background-color: rgba(255, 255, 255, 0.8)
+		background-color: rgba(255, 255, 255, 0.9)
 		position: absolute
 		left: 50%
 		margin-left: -100px
@@ -127,9 +132,6 @@ div[class$="-link"]
 		top: -100px
 		bottom: 100px
 		
-///////videos
-		
-
 #who
 	+background-image(linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 30%))
 	
@@ -141,6 +143,9 @@ div[class$="-link"]
 				font-size: 50px
 				text-transform: uppercase
 				display: inline-block
-				text-align: left
+				text-align: center
 				width: 1em
 				margin-bottom: .8em
+#contact
+	.content
+		top: 100px

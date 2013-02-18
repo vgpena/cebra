@@ -1,18 +1,19 @@
 @font-face {
   font-family: "lol";
-  src: url('../fonts/museosans_500-webfont.eot');
-  src: url('../fonts/museosans_500-webfont.eot?#iefix') format('eot'), url('../fonts/museosans_500-webfont.ttf') format('truetype'), url('../fonts/museosans_500-webfont.woff') format('woff'), url('../fonts/museosans_500-webfont.svg') format('svg'), url('../fonts/MuseoSans_500.otf') format('opentype');
+  src: url('/stylesheets/fonts/../../fonts/museosans_500-webfont.eot');
+  src: url('/stylesheets/fonts/../../fonts/museosans_500-webfont.eot?#iefix') format('eot'), url('/stylesheets/fonts/../../fonts/museosans_500-webfont.ttf') format('truetype'), url('/stylesheets/fonts/../../fonts/museosans_500-webfont.woff') format('woff'), url('/stylesheets/fonts/../../fonts/museosans_500-webfont.svg') format('svg'), url('/stylesheets/fonts/../../fonts/MuseoSans_500.otf') format('opentype');
 }
 
-/* line 9, ../sass/new.sass */
+/* line 10, ../sass/new.sass */
 body {
   font-family: "lol";
   color: #333333;
   overflow: hidden;
   margin: 0px;
+  line-height: 1.6em;
 }
 
-/* line 15, ../sass/new.sass */
+/* line 17, ../sass/new.sass */
 #bg {
   background-image: url("../images/zebra.svg");
   -webkit-background-size: cover;
@@ -22,140 +23,144 @@ body {
   position: absolute;
 }
 
-/* line 20, ../sass/new.sass */
+/* line 22, ../sass/new.sass */
 .page {
   width: 100%;
   height: 100%;
 }
 
-/* line 24, ../sass/new.sass */
+/* line 26, ../sass/new.sass */
 .content {
   width: 80%;
   margin-left: 10%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
   padding: 1em;
   position: absolute;
 }
 
-/* line 32, ../sass/new.sass */
+/* line 36, ../sass/new.sass */
 #videos > .content, #photos > .content {
   height: 100%;
 }
 
-/* line 37, ../sass/new.sass */
+/* line 41, ../sass/new.sass */
 div[class$="-link"] {
   background-color: #cccccc;
   position: absolute;
 }
-/* line 40, ../sass/new.sass */
+/* line 44, ../sass/new.sass */
 div[class$="-link"] > p {
   text-align: center;
   text-transform: uppercase;
 }
 
-/* line 44, ../sass/new.sass */
+/* line 48, ../sass/new.sass */
 .top-link, .bottom-link {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 49, ../sass/new.sass */
+/* line 53, ../sass/new.sass */
 .top-link {
   top: 0px;
 }
 
-/* line 52, ../sass/new.sass */
+/* line 56, ../sass/new.sass */
 .bottom-link {
   bottom: 0px;
 }
 
-/* line 55, ../sass/new.sass */
+/* line 59, ../sass/new.sass */
 .left-link, .right-link {
   height: 9em;
   top: 50%;
   margin-top: -100px;
   padding: 1em;
+  line-height: 1.2em;
 }
-/* line 60, ../sass/new.sass */
+/* line 65, ../sass/new.sass */
 .left-link > p, .right-link > p {
   text-align: center;
 }
 
-/* line 64, ../sass/new.sass */
+/* line 69, ../sass/new.sass */
 .videos-link > p, .photos-link > p {
   width: 1em;
 }
 
-/* line 67, ../sass/new.sass */
+/* line 72, ../sass/new.sass */
 .right-link {
   right: 0px;
 }
 
-/* line 70, ../sass/new.sass */
+/* line 75, ../sass/new.sass */
 .left-link {
   left: 0px;
 }
 
-/* line 73, ../sass/new.sass */
+/* line 78, ../sass/new.sass */
 .prev-link {
   display: none;
 }
-/* line 76, ../sass/new.sass */
+/* line 81, ../sass/new.sass */
 .prev-link.left-link > p, .prev-link.right-link > p {
   margin-top: 3em;
   margin-bottom: 3em;
 }
 
-/* line 81, ../sass/new.sass */
+/* line 86, ../sass/new.sass */
 .subsection {
   height: 100%;
   position: relative;
 }
 
-/* line 85, ../sass/new.sass */
+/* line 90, ../sass/new.sass */
 .bottom, .top {
   width: 80%;
   margin-left: 10%;
 }
-/* line 88, ../sass/new.sass */
+/* line 93, ../sass/new.sass */
 .bottom > .subsection-clicky-open, .top > .subsection-clicky-open {
   width: 200px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   left: 50%;
   margin-left: -100px;
   padding-top: 50px;
 }
-/* line 96, ../sass/new.sass */
+/* line 101, ../sass/new.sass */
 .bottom > .subsection-clicky-open > p, .top > .subsection-clicky-open > p {
   text-align: center;
   margin-top: -0.5em;
 }
-/* line 99, ../sass/new.sass */
+/* line 104, ../sass/new.sass */
 .bottom .subsection-clicky-close, .top .subsection-clicky-close {
   position: absolute;
   bottom: 0px;
   width: 100%;
 }
-/* line 103, ../sass/new.sass */
+/* line 108, ../sass/new.sass */
 .bottom .subsection-clicky-close h2, .top .subsection-clicky-close h2 {
   text-align: right;
   padding-right: 2em;
 }
-/* line 106, ../sass/new.sass */
+/* line 111, ../sass/new.sass */
 .bottom > .content, .top > .content {
   width: 100%;
   margin: 0px;
 }
 
-/* line 109, ../sass/new.sass */
+/* line 114, ../sass/new.sass */
 .bottom {
   top: 100%;
   margin-top: -100px;
 }
-/* line 112, ../sass/new.sass */
+/* line 117, ../sass/new.sass */
 .bottom > .subsection-clicky-open {
   -moz-border-radius-topleft: 100px;
   -webkit-border-top-left-radius: 100px;
@@ -164,19 +169,19 @@ div[class$="-link"] > p {
   -webkit-border-top-right-radius: 100px;
   border-top-right-radius: 100px;
 }
-/* line 114, ../sass/new.sass */
+/* line 119, ../sass/new.sass */
 .bottom > .content {
   top: 100px;
   bottom: -100px;
 }
 
-/* line 118, ../sass/new.sass */
+/* line 123, ../sass/new.sass */
 .top {
   position: absolute;
   top: -100%;
   margin-top: 100px;
 }
-/* line 122, ../sass/new.sass */
+/* line 127, ../sass/new.sass */
 .top > .subsection-clicky-open {
   -moz-border-radius-bottomleft: 100px;
   -webkit-border-bottom-left-radius: 100px;
@@ -187,13 +192,13 @@ div[class$="-link"] > p {
   top: 100%;
   margin-top: -100px;
 }
-/* line 126, ../sass/new.sass */
+/* line 131, ../sass/new.sass */
 .top > .content {
   top: -100px;
   bottom: 100px;
 }
 
-/* line 133, ../sass/new.sass */
+/* line 135, ../sass/new.sass */
 #who {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0.9)));
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 30%);
@@ -201,20 +206,25 @@ div[class$="-link"] > p {
   background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 30%);
   background-image: linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 30%);
 }
-/* line 136, ../sass/new.sass */
+/* line 138, ../sass/new.sass */
 #who .content {
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 138, ../sass/new.sass */
+/* line 140, ../sass/new.sass */
 #who .content p {
   width: 100%;
 }
-/* line 140, ../sass/new.sass */
+/* line 142, ../sass/new.sass */
 #who .content p > span {
   font-size: 50px;
   text-transform: uppercase;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   width: 1em;
   margin-bottom: 0.8em;
+}
+
+/* line 150, ../sass/new.sass */
+#contact .content {
+  top: 100px;
 }

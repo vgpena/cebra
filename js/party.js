@@ -135,13 +135,20 @@ $(document).ready(function(){
 			currPos = $(this).width();
 		}
 		else{
-			if (currPos >= targetWidth/2){
-				$(this).css('text-align', 'right');
-			};
 			if (currPos + 1/denom*targetWidth >= targetWidth){
-				$(this).css('margin-left', (targetWidth - currPos)+'px')
+				$(this).css({'margin-left': (targetWidth - currPos)+'px', 'text-align': 'right'})
 			};
 			$(this).css('font-size', (1/denom)*targetWidth+'px');
+		};
+		if (currPos==$(this).width()){
+			$(this).css('text-align', 'left');
+		};
+		var curr = $(this).text(),
+			punctuation = [".", ",", ";", ":"];
+		for (var i=0; i<=punctuation.length; i++){
+			if (curr==punctuation[i]){
+				$(this).css('text-align', 'left');
+			};
 		};
 	});
 });
