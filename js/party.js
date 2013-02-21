@@ -110,7 +110,8 @@ $(document).ready(function(){
 		text = target.text().split(''),
 		targetWidth = $('#who').innerWidth()*.8,
 		currPos = 0,
-		denom = 20;
+		denom = 20,
+		currLine = [];
 	target.empty();
 	$.fn.refill = function(callback){
 		for (var i=0; i < text.length; i++){
@@ -122,6 +123,7 @@ $(document).ready(function(){
 		currSize = (1/denom)*targetWidth;
 	});
 	target.children().each(function(){
+		currLine.push($(this));
 		$(this).width((1/denom)*targetWidth);
 		currPos += $(this).width();
 		if (currPos >= targetWidth){
@@ -131,14 +133,36 @@ $(document).ready(function(){
 			else{
 				denom = 80;
 			};
-			$(this).css('font-size', (1/denom)*targetWidth+'px');
+			$(this).css({'width': (1/denom)*targetWidth+'px', 'font-size': (1/denom)*targetWidth+'px'});
 			currPos = $(this).width();
+			currLine = [$(this), ];
 		}
 		else{
 			if (currPos + 1/denom*targetWidth >= targetWidth){
-				$(this).css({'margin-left': (targetWidth - currPos)+'px', 'text-align': 'right'})
+				var tempDenom = denom;
+				if (currLine[0].text()==" "){
+					console.log('first');
+					tempDenom-=1;
+					currLine[0].width(0+'px');
+					currLine.splice(0, 1);
+				};
+				if ($(this).text()==" "){
+					tempDenom-=1;
+					$(this).width(0+'px');
+					currLine.pop($(this));
+				};
+				if (tempDenom != denom){
+					console.log(tempDenom, denom);
+					for (var i=0; i<currLine.length; i++){
+						currLine[i].width((1/tempDenom)*targetWidth+'px');
+						currLine[i].css('font-size', (1/tempDenom)*targetWidth+'px');
+					};
+				}
+				currLine[currLine.length-1].css({'font-size': (1/tempDenom)*targetWidth+'px', 'margin-left': (targetWidth - currPos)+'px', 'text-align': 'right'});
+			}
+			else{
+				$(this).css('font-size', (1/denom)*targetWidth+'px');
 			};
-			$(this).css('font-size', (1/denom)*targetWidth+'px');
 		};
 		if (currPos==$(this).width()){
 			$(this).css('text-align', 'left');
