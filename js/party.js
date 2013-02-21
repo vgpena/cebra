@@ -111,6 +111,7 @@ $(document).ready(function(){
 		targetWidth = $('#who').innerWidth()*.8,
 		currPos = 0,
 		denom = 20,
+		step = 10,
 		currLine = [];
 	target.empty();
 	$.fn.refill = function(callback){
@@ -128,7 +129,7 @@ $(document).ready(function(){
 		currPos += $(this).width();
 		if (currPos >= targetWidth){
 			if (denom < 80){
-				denom += 10;
+				denom += step;
 			}
 			else{
 				denom = 80;
@@ -140,8 +141,8 @@ $(document).ready(function(){
 		else{
 			if (currPos + 1/denom*targetWidth >= targetWidth){
 				var tempDenom = denom;
+				//for if there is a space at the beginning or end of the line in question
 				if (currLine[0].text()==" "){
-					console.log('first');
 					tempDenom-=1;
 					currLine[0].width(0+'px');
 					currLine.splice(0, 1);
@@ -150,6 +151,22 @@ $(document).ready(function(){
 					tempDenom-=1;
 					$(this).width(0+'px');
 					currLine.pop($(this));
+				};
+				//so that words aren't broken up awkwardly
+				for (var i=currLine.length-1; i>=currLine.length - 1 - ((step/2)-1); i--){
+					if (currLine[i].text()==" "){
+						var currInd = currLine.length - 1 - i,
+							nextInd,
+							nextLine = [currLine[currLine.length - 1].next(), ];
+						for (n=0; n<(step/2)-2; n++){
+							nextLine.push(nextLine[n].next());
+							if (nextLine[n].next().text()==" "){
+								nextInd = n+1;
+							};
+						};
+						console.log('currInd:' + currInd);
+						console.log('nextInd:' + nextInd);
+					};
 				};
 				if (tempDenom != denom){
 					console.log(tempDenom, denom);
