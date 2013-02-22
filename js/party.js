@@ -122,12 +122,21 @@ $(document).ready(function(){
 	for (var i=0; i < text.length; i++){
 		target.append('<span>'+text[i]+'</span>');
 	};
+	
 	currLetter = target.children().first();
 	for (var i=0; i < currCount; i++){
 		currLine.push(currLetter);
 		currLetter = currLetter.next();
 	};
-	console.log(currLine);
+	
+	for (var i=0; i<step/2; i++){
+		nextLine.push(currLetter);
+		currLetter = currLetter.next();
+	};//and then you can just set currLetter = nextLine[0] when you need to start keeping track of currLine again
+	
+	
+	
+	
 	//keep the stuff below
 	//var curr = $(this).text(),
 	//	punctuation = [".", ",", ";", ":"];
