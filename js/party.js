@@ -159,6 +159,7 @@ $(document).ready(function(){
 	
 	function MoveDown(){
 		console.log('move down!')
+		
 	};
 	
 	if (spaceCurr != -1){
@@ -170,7 +171,7 @@ $(document).ready(function(){
 		};
 	}
 	else{
-		if (spaceNext != -1){
+		if (spaceNext != -1 && spaceCurr != 0){
 			MoveUp();
 		};
 	};
