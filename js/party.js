@@ -115,8 +115,8 @@ $(document).ready(function(){
 		currCount = startCount,
 		currLine = [],
 		nextLine = [],
-		spaceCurr,
-		spaceNext,
+		spaceCurr = -1,
+		spaceNext = -1,
 		currLetter;
 	target.empty();
 	for (var i=0; i < text.length; i++){
@@ -124,16 +124,56 @@ $(document).ready(function(){
 	};
 	
 	currLetter = target.children().first();
+	///this whole next block will have to be repeated until the endCount has been reached.
 	for (var i=0; i < currCount; i++){
 		currLine.push(currLetter);
 		currLetter = currLetter.next();
 	};
 	
-	for (var i=0; i<step/2; i++){
+	for (var i=0; i<(step/2)-1; i++){
 		nextLine.push(currLetter);
 		currLetter = currLetter.next();
 	};//and then you can just set currLetter = nextLine[0] when you need to start keeping track of currLine again
 	
+	for (var i=0; i<(step/2)-1; i++){
+		if (spaceCurr == -1){
+			if (currLine[currLine.length - 1 - i].text()==" "){
+				spaceCurr = i;
+			};
+		};
+		if (spaceNext == -1){
+			if (nextLine[i].text()==" "){
+				spaceNext = i;
+			};
+		};
+	};
+	
+	function MoveUp(){
+		console.log('move up!')
+		for (var i=0; i<spaceNext; i++){
+			currLine.push(nextLine[i]);
+			currCount++;
+		};
+		console.log(currLine);
+	};
+	
+	function MoveDown(){
+		console.log('move down!')
+	};
+	
+	if (spaceCurr != -1){
+		if (spaceCurr > spaceNext){
+			MoveDown();
+		}
+		else{
+			MoveUp();
+		};
+	}
+	else{
+		if (spaceNext != -1){
+			MoveUp();
+		};
+	};
 	
 	
 	
