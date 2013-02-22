@@ -108,14 +108,26 @@ $(document).ready(function(){
 	///////text resizing in #who
 	var target = $('#who .content > p'),
 		text = target.text().split(''),
-		targetWidth = $('#who').innerWidth()*.8;
+		targetWidth = $('#who').innerWidth()*.8,
+		startCount = 20,
+		endCount = 80,
+		step = 10,
+		currCount = startCount,
+		currLine = [],
+		nextLine = [],
+		spaceCurr,
+		spaceNext,
+		currLetter;
 	target.empty();
-	$.fn.refill = function(){
-		for (var i=0; i < text.length; i++){
-			$(this).append('<span>'+text[i]+'</span>');
-		};
+	for (var i=0; i < text.length; i++){
+		target.append('<span>'+text[i]+'</span>');
 	};
-	target.refill();
+	currLetter = target.children().first();
+	for (var i=0; i < currCount; i++){
+		currLine.push(currLetter);
+		currLetter = currLetter.next();
+	};
+	console.log(currLine);
 	//keep the stuff below
 	//var curr = $(this).text(),
 	//	punctuation = [".", ",", ";", ":"];
