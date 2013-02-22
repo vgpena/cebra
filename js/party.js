@@ -112,7 +112,9 @@ $(document).ready(function(){
 		currPos = 0,
 		denom = 20,
 		step = 10,
-		currLine = [];
+		currLine = [],
+		nextLine = [],
+		spaceCurrLine = false;
 	target.empty();
 	$.fn.refill = function(callback){
 		for (var i=0; i < text.length; i++){
@@ -144,10 +146,11 @@ $(document).ready(function(){
 				//so that words aren't broken up awkwardly
 				for (var i=currLine.length-1; i>=currLine.length - 1 - ((step/2)-1); i--){
 					if (currLine[i].text()==" "){
+						spaceCurrLine = true;
 						console.log(currLine[i].next().text());
 						var currInd = currLine.length - 1 - i,
-							nextInd,
-							nextLine = [currLine[currLine.length - 1].next(), ];
+							nextInd;
+						nextLine = [currLine[currLine.length - 1].next(), ];
 						for (n=0; n<(step/2)-1; n++){
 							nextLine.push(nextLine[n].next());
 							if (nextLine[n].next().text()==" "){
@@ -163,6 +166,17 @@ $(document).ready(function(){
 							else{
 								console.log('move onto current line');
 							};
+						};
+					};
+				}
+				if (spaceCurrLine == false){
+					nextLine = [currLine[currLine.length - 1].next(), ];
+					for (n=0; n<(step/2)-1; n++){
+						nextLine.push(nextLine[n].next());
+						if (nextLine[n].next().text()==" "){
+							nextInd = n+1;
+							console.log('next line, nextInd: '+nextInd);
+							console.log(nextLine[n].text());
 						};
 					};
 				};
